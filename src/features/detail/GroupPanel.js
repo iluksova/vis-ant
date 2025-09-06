@@ -32,7 +32,7 @@ export function GroupPanel(props) {
 
         return {
             title: {text: title,},
-            grid: {show: true, left: 40, top: 40, bottom: 40, right: 40, containLabel: true,},
+            grid: {show: true, left: 0, top: 40, bottom: 40, right: 10, containLabel: true,},
             animation: false,
             tooltip: {
                 show: true,

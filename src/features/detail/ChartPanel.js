@@ -10,8 +10,8 @@ export function ChartPanel(props) {
     const getOptions = (title, xAxis, values) => {
 
         return {
-            title: { text: title, },
-            grid: {show: true, left: 40, top: 40, bottom: 40, right: 40, containLabel: true,},
+            title: {text: title,},
+            grid: {show: true, left: 0, top: 40, bottom: 40, right: 10, containLabel: true,},
             animation: false,
             tooltip: {
                 show: true,
@@ -48,9 +48,9 @@ export function ChartPanel(props) {
     const maxItems = Math.min(itemsCount, data.length);
     const chartData = [];
     for (let i = 0; i < maxItems; i++) {
-        const dataItem = { ...data[i] };
+        const dataItem = {...data[i]};
         let dataItemCropped = omit('id', dataItem);
-        ['Date_MRI_exam','VekPriVys','VekPriPocNemoci','TrvaniNemPriVys','MedullaC3C4_SV_cm3$','WMabnormal_FS_cm3','CSF_cm3_Morphobox','GM_cm3_Morphobox','WM_cm3_Morphobox','TIV_cm3_Morphobox'].forEach((item) =>
+        ['Date_MRI_exam', 'VekPriVys', 'VekPriPocNemoci', 'TrvaniNemPriVys', 'MedullaC3C4_SV_cm3$', 'WMabnormal_FS_cm3', 'CSF_cm3_Morphobox', 'GM_cm3_Morphobox', 'WM_cm3_Morphobox', 'TIV_cm3_Morphobox'].forEach((item) =>
             dataItemCropped = omit(item, dataItemCropped)
         );
 

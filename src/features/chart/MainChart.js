@@ -1,9 +1,9 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useRef} from 'react';
 import ReactEcharts from 'echarts-for-react';
-import {useSelector, useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import CircularProgress from '@mui/material/CircularProgress';
-import {selectTransformation, transformation, visualization} from '../options/optionsSlice';
-import {selectIds, transformations, } from "../data/dataSlice";
+import {transformation, visualization} from '../options/optionsSlice';
+import {selectIds, transformations,} from "../data/dataSlice";
 
 export function MainChart() {
 
@@ -24,7 +24,7 @@ export function MainChart() {
     }, [selectedTransformation]);
 
     const gridSize = 10
-    const chartSize = 1150
+    const chartSize = 1050
 
     const ranges = (data) => {
         const xMin = data.reduce((prev, curr) => prev[0] < curr[0] ? prev : curr)[0];
@@ -112,7 +112,7 @@ export function MainChart() {
 
         if (selectedVisualization === 'scatter') {
             return {
-                grid: {show: true, left: 40, top: 40, bottom: 40, right: 40},
+                grid: {show: true, left: 20, top: 30, bottom: 40, right: 10},
                 xAxis: {
                     show: true,
                     scale: true,
@@ -149,7 +149,7 @@ export function MainChart() {
             };
         } else {
             return {
-                grid: {show: true, left: 40, top: 40, bottom: 40, right: 40},
+                grid: {show: true, left: 20, top: 30, bottom: 40, right: 10},
                 xAxis: {
                     show: true,
                     scale: true,

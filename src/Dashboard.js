@@ -138,7 +138,7 @@ function Dashboard() {
             <Box sx={{
                 display: 'flex',
                 flexGrow: 1,
-                height: '1150px',
+                height: '1050px',
                 width: '100%',
                 mt: '70px',
                 overflow: 'hidden'
@@ -148,7 +148,6 @@ function Dashboard() {
                     display: 'flex',
                     flexGrow: 0,
                     height: '100%',
-                    width: '1200px',
                 }}
                      component="div">
                     <MainChart/>
