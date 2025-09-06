@@ -1,19 +1,11 @@
-import React, {useState} from 'react';
-import {useSelector, useDispatch} from 'react-redux';
-import {
-    selectTransformation,
-    selectVisualization,
-    transformation,
-    visualization
-} from './optionsSlice';
-import {styled} from "@mui/material/styles";
-import {Divider, FormControlLabel, FormLabel, Radio, RadioGroup, Stack, Toolbar} from "@mui/material";
+import React from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {selectTransformation, selectVisualization, transformation, visualization} from './optionsSlice';
+import {FormControlLabel, FormLabel, Radio, RadioGroup, Stack} from "@mui/material";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
-
-const optionsWidth = 240;
 
 
 // const StyledOptions = styled(Stack, {shouldForwardProp: (prop) => prop})(

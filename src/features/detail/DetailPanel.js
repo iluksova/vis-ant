@@ -1,8 +1,7 @@
 import React from 'react';
-import {Box, Tab, Tabs, Typography} from "@mui/material";
-import {DataGrid} from '@mui/x-data-grid';
+import {Box, Tab, Tabs} from "@mui/material";
 import {useSelector} from "react-redux";
-import {selectedItems, dataset} from "../data/dataSlice";
+import {dataset, selectedItems} from "../data/dataSlice";
 import {visualization} from '../options/optionsSlice';
 import {GroupPanel} from "./GroupPanel";
 import {DataTablePanel} from "./DataTablePanel";

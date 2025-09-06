@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {styled, createTheme, ThemeProvider} from '@mui/material/styles';
+import {createTheme, ThemeProvider} from '@mui/material/styles';
 
 import './App.css';
 import {AppBar, Box, CssBaseline, Toolbar, Typography} from "@mui/material";
@@ -22,16 +22,6 @@ function parseCsv(result) {
     return results.data
 }
 
-function parseCsvPath(path) {
-    let data = [];
-    Papa.parse(path, {
-        header: true, dynamicTyping: true, download: true, complete: function (results) {
-            data = results.data;
-        }
-    }) // object with { data, errors, meta }
-    return data;
-}
-
 function Dashboard() {
 
     const dataPath = 'data/rrsm/data.csv';
@@ -40,8 +30,6 @@ function Dashboard() {
     const tsne5TransformationPath = 'data/rrsm/2d/tsne_p5.csv';
     const tsne30TransformationPath = 'data/rrsm/2d/tsne_p30.csv';
     const tsne50TransformationPath = 'data/rrsm/2d/tsne_p50.csv';
-    const tsne100TransformationPath = 'data/rrsm/2d/tsne_p100.csv';
-
 
     const dispatch = useDispatch();
 

@@ -1,0 +1,8 @@
+node_modules
+public_backup
+npm-debug.log
+Dockerfile
+.dockerignore
+.git
+.gitignore
+.env

@@ -5,7 +5,7 @@ import ReactEcharts from "echarts-for-react";
 export function ChartPanel(props) {
     const {data, value, index, ...other} = props;
 
-    const [itemsCount, setItemsCount] = React.useState(10);
+    const [itemsCount] = React.useState(10);
 
     const getOptions = (title, xAxis, values) => {
 
